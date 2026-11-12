@@ -11,39 +11,22 @@ tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['
 </script>
 <style>
 * { box-sizing: border-box; }
-body { margin: 0; background: #000; color: #fff; overflow-x: hidden; }
+body { margin: 0; background: #05070a; color: #fff; overflow-x: hidden; }
 
-/* ===== ВЕРХНИЙ ФОН ===== */
+/* ===== ВЕРХНИЙ ФОН (Твоя картинка 1.png) ===== */
 .bg-hero {
     position: absolute;
     inset: 0;
-    background-image: url('https://iptvx.one/imgz/_news_.jpg');
+    background-image: url('1.png'); /* <--- ТУТ ТВОЯ КАРТИНКА */
     background-size: cover;
     background-position: center;
     z-index: 0;
 }
+/* Затемнение, чтобы текст читался поверх картинки */
 .bg-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.9) 70%, #05070a 100%);
-    z-index: 1;
-}
-
-/* ===== НИЖНИЙ ФОН (1.png) ===== */
-.bg-bottom {
-    position: absolute;
-    inset: 0;
-    background-image: url('1.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: 0;
-    filter: brightness(0.4);
-}
-.bg-bottom-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, #05070a 0%, rgba(5,7,10,0.75) 50%, #05070a 100%);
+    background: linear-gradient(180deg, rgba(5,7,10,0.7) 0%, rgba(5,7,10,0.85) 60%, #05070a 100%);
     z-index: 1;
 }
 
@@ -51,14 +34,14 @@ body { margin: 0; background: #000; color: #fff; overflow-x: hidden; }
 
 /* ===== СТЕКЛО ===== */
 .glass {
-    background: rgba(10, 14, 22, 0.7);
+    background: rgba(10, 14, 22, 0.6);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.08);
 }
 .glass-hover:hover {
     border-color: rgba(96, 165, 250, 0.4);
-    background: rgba(15, 22, 35, 0.85);
+    background: rgba(15, 22, 35, 0.8);
 }
 
 /* ===== ШАПКА ===== */
@@ -102,7 +85,7 @@ body { margin: 0; background: #000; color: #fff; overflow-x: hidden; }
     </div>
 </header>
 
-<!-- ===== ГЛАВНЫЙ ЭКРАН ===== -->
+<!-- ===== ГЛАВНЫЙ ЭКРАН (ФОН 1.png) ===== -->
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
     <div class="bg-hero"></div>
     <div class="bg-overlay"></div>
@@ -163,12 +146,9 @@ body { margin: 0; background: #000; color: #fff; overflow-x: hidden; }
     </div>
 </section>
 
-<!-- ===== О ПРЕДЛОЖЕНИИ (с нижним фоном 1.png) ===== -->
-<section id="about" class="relative py-20 px-5 overflow-hidden">
-    <div class="bg-bottom"></div>
-    <div class="bg-bottom-overlay"></div>
-
-    <div class="relative z-10 max-w-4xl mx-auto">
+<!-- ===== О ПРЕДЛОЖЕНИИ (ЧИСТЫЙ ФОН) ===== -->
+<section id="about" class="relative py-20 px-5 border-t border-white/5">
+    <div class="max-w-4xl mx-auto">
         <div class="text-center mb-14">
             <h2 class="text-3xl sm:text-4xl font-black mb-4">Что мы устанавливаем</h2>
             <p class="text-slate-400 max-w-xl mx-auto">Полноценный IPTV-плеер прямо на вашу ТВ-приставку. Без сложных настроек и лишних подписок.</p>
